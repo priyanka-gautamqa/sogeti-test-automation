@@ -52,3 +52,14 @@ npx playwright test tests/test-case-001.spec.ts --headed --project=chromium
 npx playwright show-report
 ```
 
+### Multilingual Support
+
+The current test cases are implemented using the English version of the website.
+
+To support multiple languages in the future, the framework can be extended by:
+
+- Ask developers to add language-independent test IDs (e.g., `data-testid`)
+- Use centralized translation files : This is useful when you want to verify the actual localized content rather than simply locate an element.
+- Combination of the above suggested methods
+
+This approach would improve reusability and maintainability without duplicating test logic.
