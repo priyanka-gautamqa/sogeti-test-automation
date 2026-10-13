@@ -1,35 +1,54 @@
-SOGETI TEST AUTOMATION FRAMEWORK PRACTICE
+# SOGETI TEST AUTOMATION FRAMEWORK PRACTICE
 
-1. Prerequisites
+## 1. Prerequisites
 
-Node.js 18 or newer (check with node --version). Download: https://nodejs.org
-Git (check with git --version). Download: https://git-scm.com
+Before running the tests, make sure you have the following installed:
 
-2. Download the project
+- Node.js 18 or newer. Check with: `node --version`
+- Git. Check with: `git --version`
 
+Download links:
+
+- https://nodejs.org
+- https://git-scm.com
+
+## 2. Download the project
+
+```bash
 git clone https://github.com/priyanka-gautamqa/sogeti-test-automation.git
 cd sogeti-test-automation
+```
 
-3. Install
+## 3. Install dependencies
 
+```bash
 npm ci
 npx playwright install
+```
 
-4. Execute the test cases
+## 4. Execute the test cases
 
-4.1. Run all tests (headless):
+### 4.1 Run all tests (headless)
 
-    npx playwright test
+```bash
+npx playwright test
+```
 
-4.2. Run with a visible browser:
+### 4.2 Run with a visible browser
 
-    npx playwright test --headed --project=chromium
+```bash
+npx playwright test --headed --project=chromium
+```
 
-4.3. Run a single test file:
+### 4.3 Run a single test file
 
-    npx playwright test tests/test-case-001.spec.ts --headed --project=chromium
+```bash
+npx playwright test tests/test-case-001.spec.ts --headed --project=chromium
+```
 
-4.4. View the report
+### 4.4 View the report
 
-    npx playwright show-report
+```bash
+npx playwright show-report
+```
 
