@@ -17,9 +17,12 @@ export class HomePage {
         this.page = page;
         this.servicesElement = page
             .locator('#menu-main-desktop')
-            .getByRole('link', { name: 'Services menu', exact: true });
+            .getByRole('link', { name: 'Services menu', exact: true }); //href="https://www.sogeti.com/contact-us/"
 
-        this.contactUsElement = page.getByRole('link', { name: 'Contact us', exact: true });
+        this.contactUsElement = page
+            .locator('.header-top')
+            .locator('a[href$="/contact-us/"]');
+            
         this.qualityEngineeringElement = page
             .locator('.menu-l1')
             .getByRole('link', { name: 'Quality Engineering menu', exact: true });
@@ -57,6 +60,12 @@ export class HomePage {
     async navigateToQualityEngineeringPage() {
         console.log(await this.qualityEngineeringElement.count());
         await this.qualityEngineeringElement.click();
+    }
+
+
+    async navigateToContactUsPage() {
+        await this.contactUsElement.click();
+
     }
 
 
